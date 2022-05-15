@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/earlyaccess/amstelvaralpha.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-paper-white: #f1f1f1;
+}
+
+header {
+  background-color: var(--color-paper-white);
+  background: no-repeat url("./assets/images/flower-pattern.png") bottom right,
+    no-repeat url("./assets/images/flower-pattern.png") bottom left;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header nav {
+  width: 100%;
+  flex: 0 1 auto;
+}
+
+header nav input {
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 0.5px black;
+}
+
+header nav button {
+  border: none;
+  background-color: transparent;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav .logo a {
+  display: flex;
+}
+
+header nav .logo h3 {
+  font-weight: 400;
+}
+
+header nav .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+header nav .row .access {
+  display: flex;
+  align-items: center;
+}
+
+header nav .row .access * {
+  padding: 0 5px;
+}
+
+header nav .divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgb(148, 148, 148);
+  margin: 10px 0;
+}
+
+header nav .row span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+header .hero {
+  display: flex;
+  height: max-content;
+}
+
+header .hero > img {
+  margin: 0 auto;
+}
+
+header .hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px;
+}
+
+header .hero > div h1 {
+  font-family: roboto;
+  font-size: 4.5rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+header .hero > div p {
+  font-family: roboto;
+  font-size: 30px;
+  font-weight: 200;
+  line-height: 55px;
+}
+
+header .hero > div button {
+  background-color: #2f2f2f;
+  border: none;
+  border-radius: 0%;
+  color: white;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
