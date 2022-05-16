@@ -7,7 +7,10 @@
 }
 
 :root {
-  --color-paper-white: #f1f1f1;
+  --color-paper-white: #afafaf;
+  --color-dark-blue: #1e2832;
+  --color-light-red: #ff6f61;
+  --text-gray: #777777;
 }
 
 header {
@@ -128,4 +131,206 @@ header .hero > div button {
   font-size: 1.2rem;
   font-weight: 400;
   cursor: pointer;
+}
+
+/* brands section */
+.brands {
+  display: flex;
+  justify-content: space-between;
+  margin: 90px auto;
+}
+
+/* popular products */
+
+.popular-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.popular-products > .product-tiles {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.popular-products > div > div:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+}
+
+.popular-products > div:nth-child(2) {
+  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+}
+
+.popular-products > div > div > img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.popular-products > div > div {
+  position: relative;
+  overflow: hidden;
+}
+
+.popular-products .product-category {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 20px;
+  margin: 0;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.popular-products > div > div:hover .product-category {
+  transform: translateY(0);
+}
+
+.popular-products > div > div:hover img {
+  transform: scale(1.1);
+}
+
+.popular-products > h3 {
+  font-family: roboto;
+  text-orientation: sideways-right;
+  writing-mode: vertical-lr;
+  font-size: 2rem;
+  font-weight: 300;
+  transform: rotate(180deg);
+}
+
+/* new products */
+
+.new-products {
+  margin: 90px auto;
+}
+
+.new-products h3 {
+  margin: 30px auto;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.new-products .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.new-products .header div {
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 10px;
+}
+
+.new-products .header a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: var(--text-gray);
+}
+
+.new-products .header a.selected {
+  color: var(--color-dark-blue);
+}
+
+.new-products .product-tiles .product-info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-products .prices span.old,
+.new-products .categoty {
+  color: var(--text-gray);
+  text-transform: capitalize;
+}
+
+.new-products .prices span.old {
+  text-decoration: line-through;
+}
+
+.new-products .prices span.off {
+  color: var(--color-light-red);
+}
+
+.new-products .product-tiles {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.new-products .product-tiles .tile,
+.new-products .product-tiles .tile .image,
+.new-products .product-tiles .tile img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.new-products .product-tiles .tile,
+.new-products .product-tiles .tile .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.new-products .product-tiles .tile .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 15px 20px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.new-products .image:hover .overlay {
+  transform: translateY(0);
+}
+
+.new-products .image:hover img {
+  transform: scale(1.1);
+}
+
+.new-products .overlay i {
+  margin: 10px;
+}
+
+.new-products .tile .tag {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 5px 10px;
+  background-color: var(--color-dark-blue);
+  color: white;
+  text-transform: uppercase;
+}
+
+.new-products .tile .tag.red {
+  background-color: var(--color-light-red);
+}
+
+.new-products .tile h4 {
+  font-family: roboto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  margin: 15px 0;
 }
