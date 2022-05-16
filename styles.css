@@ -7,8 +7,9 @@
 }
 
 :root {
-  --color-paper-white: #afafaf;
+  --color-paper-white: #f1f1f1;
   --color-dark-blue: #1e2832;
+  --calor-zara-black: #010204;
   --color-light-red: #ff6f61;
   --text-gray: #777777;
 }
@@ -16,7 +17,8 @@
 header {
   background-color: var(--color-paper-white);
   background: no-repeat url("./assets/images/flower-pattern.png") bottom right,
-    no-repeat url("./assets/images/flower-pattern.png") bottom left;
+    no-repeat url("./assets/images/flower-pattern.png") bottom left,
+    var(--color-paper-white);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -50,14 +52,6 @@ header nav button {
 header nav a {
   text-decoration: none;
   color: black;
-}
-
-header nav .logo a {
-  display: flex;
-}
-
-header nav .logo h3 {
-  font-weight: 400;
 }
 
 header nav .row {
@@ -333,4 +327,322 @@ header .hero > div button {
   font-weight: 400;
   margin: 0;
   margin: 15px 0;
+}
+
+/* zara section */
+
+.zara {
+  background: url("./assets/images/andrey-zvyagintsev-EQj1ZMpq_VM-unsplash\ 1.png")
+      no-repeat left center,
+    var(--calor-zara-black);
+  background-size: contain;
+  overflow: hidden;
+}
+
+.zara > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.zara > div > div {
+  width: 50%;
+}
+
+.zara .zara-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 30px auto;
+  color: white;
+}
+
+.zara .zara-info .logo {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 30px;
+}
+
+.zara .zara-info .logo img:nth-child(2) {
+  transform: translateX(-20px);
+  height: 250px;
+}
+
+.zara .zara-info pre {
+  font-family: roboto;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 50px 0;
+  margin-top: 10px;
+  line-height: 1.5rem;
+}
+
+.zara .zara-info a {
+  text-decoration: none;
+  color: var(--color-dark-blue);
+  background-color: white;
+  padding: 20px 40px;
+  font-family: roboto;
+}
+
+/* best-sellers */
+
+.best-sellers {
+  margin: 90px auto;
+}
+
+.best-sellers .tile {
+  width: 28%;
+  margin-right: 10px;
+  border-radius: 5px;
+  /* counter-increment: tile; */
+}
+
+.best-sellers h3 {
+  margin: 30px auto;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.best-sellers .header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.best-sellers .header div {
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 10px;
+}
+
+.best-sellers .header a {
+  text-decoration: none;
+  margin: 0 10px;
+  color: var(--text-gray);
+}
+
+.best-sellers .header a.selected {
+  color: var(--color-dark-blue);
+}
+
+.best-sellers .product-tiles .product-info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.best-sellers .prices span.old,
+.best-sellers .categoty {
+  color: var(--text-gray);
+  text-transform: capitalize;
+}
+
+.best-sellers .prices span.old {
+  text-decoration: line-through;
+}
+
+.best-sellers .prices span.off {
+  color: var(--color-light-red);
+}
+
+.best-sellers .product-tiles .tile,
+.best-sellers .product-tiles .tile .image,
+.best-sellers .tile img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.best-sellers .tile,
+.best-sellers .tile .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.best-sellers .tile .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  color: white;
+  padding: 15px 20px;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+.best-sellers .image:hover .overlay {
+  transform: translateY(0);
+}
+
+.best-sellers .image:hover img {
+  transform: scale(1.1);
+}
+
+.best-sellers .overlay i {
+  margin: 10px;
+}
+
+.best-sellers .tile .tag {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 5px 10px;
+  background-color: var(--color-dark-blue);
+  color: white;
+  text-transform: uppercase;
+}
+
+.best-sellers .tile .tag.red {
+  background-color: var(--color-light-red);
+}
+
+.best-sellers .tile h4 {
+  font-family: roboto;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+  margin: 15px 0;
+}
+
+/* socials */
+
+.socials {
+  background-color: var(--color-paper-white);
+}
+
+.socials h3 {
+  font-family: roboto;
+  margin: 0 auto;
+  padding: 90px 0;
+  width: fit-content;
+  font-weight: 300;
+  font-size: 45px;
+}
+
+.socials .instagram-pics {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.socials .instagram-pics .image {
+  position: relative;
+  width: 13%;
+  height: auto;
+}
+
+.socials .instagram-pics .image img {
+  width: 100%;
+  height: auto;
+}
+
+.socials .instagram-pics .image .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.socials .instagram-pics .image:hover .icon {
+  opacity: 1;
+}
+
+.socials .newsletter {
+  font-family: "open sans";
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding-bottom: 110px;
+}
+
+.socials .newsletter input,
+.socials .newsletter button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-dark-blue);
+  font-size: large;
+  margin: 0 20px;
+  padding: 10px 20px;
+}
+
+.socials .newsletter input {
+  min-width: 500px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: auto;
+}
+
+footer.container {
+  padding: 90px 0;
+}
+
+footer > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 33%;
+}
+
+footer > div > span {
+  font-family: "open sans";
+  font-size: 14px;
+  font-weight: 300;
+  margin: 10px;
+}
+
+footer > div > span:nth-child(1) {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.logo a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo h3 {
+  padding: 0 7px;
+  font-family: roboto;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.copy {
+  background-color: #2f2f2f;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.copy span {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
 }
